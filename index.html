@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#140f24" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <title>Shop</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <div class="bg" aria-hidden="true">
+    <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span>
+    <div class="grain"></div>
+  </div>
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo-dot"></span>
+      <span id="shopName">Shop</span>
+    </div>
+    <button class="icon-btn cart-btn" id="openCart" aria-label="Abrir carrito">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h12l-1 13H7L6 7z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+      <span class="badge" id="cartCount" hidden>0</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">✦ Nueva colección</p>
+      <h1 id="heroTitle">Nothing Shop</h1>
+      <p class="tagline" id="tagline"></p>
+    </section>
+
+    <div id="notice" class="notice" hidden></div>
+
+    <nav class="chips" id="collections" aria-label="Colecciones"></nav>
+
+    <section class="grid" id="grid" aria-live="polite"></section>
+    <p class="empty" id="empty" hidden>No hay productos en esta colección todavía.</p>
+  </main>
+
+  <!-- Detalle de producto -->
+  <div class="scrim" id="scrim" hidden></div>
+  <section class="sheet" id="productSheet" aria-modal="true" role="dialog" hidden>
+    <div class="sheet-handle"></div>
+    <button class="icon-btn close" data-close aria-label="Cerrar">✕</button>
+    <div class="sheet-body" id="productBody"></div>
+  </section>
+
+  <!-- Carrito -->
+  <section class="sheet" id="cartSheet" aria-modal="true" role="dialog" hidden>
+    <div class="sheet-handle"></div>
+    <button class="icon-btn close" data-close aria-label="Cerrar">✕</button>
+    <div class="sheet-body">
+      <h2>Tu carrito</h2>
+      <div id="cartItems" class="cart-items"></div>
+      <div class="cart-footer">
+        <div class="total"><span>Subtotal</span><strong id="cartTotal">—</strong></div>
+        <button class="btn primary" id="checkoutBtn">Ir a pagar</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="toast" id="toast" role="status"></div>
+
+  <script src="nothing code/config.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>

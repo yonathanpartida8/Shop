@@ -1,0 +1,7 @@
+{
+  "appId": "com.nothingcode.shop",
+  "appName": "Nothing Shop",
+  "webDir": "www",
+  "backgroundColor": "#140f24",
+  "android": { "allowMixedContent": false }
+}
