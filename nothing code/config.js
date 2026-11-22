@@ -14,7 +14,7 @@
  */
 window.NOTHING_CODE = {
   // ⬇️ PEGA AQUÍ TU STOREFRONT TOKEN
-  STOREFRONT_TOKEN: "",
+  STOREFRONT_TOKEN: "ptkn_8206a727-c03c-4525-b6c1-c35b1b35fed9",
 
   // Dominio de tu tienda Fourthwall, ej: "mitienda.fourthwall.com"
   SHOP_DOMAIN: "",
